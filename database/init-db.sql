@@ -7,8 +7,13 @@ drop table if exists users;
 
 -- 1. Create the users table
 create table if not exists users (
-  -- [INSERT CODE HERE]
+  id int primary key auto_increment,
+  first_name varchar(255) not null,
+  last_name varchar(255) not null
 );
 
+
 -- 2. Insert initial seed records into the table
--- [INSERT CODE HERE]
+insert into users (first_name, last_name) values
+  ('John', 'Doe'),
+  ('Jane', 'Doe');
